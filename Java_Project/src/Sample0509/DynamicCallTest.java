@@ -1,14 +1,14 @@
 package Sample0509;
 
-class Animals {
-	void sound() {
-		System.out.println("Animal Å¬·¡½ºÀÇ sound()");
-	}
+abstract class Animals {
+	abstract void sound(); //{
+//		System.out.println("Animal Å¬·¡½ºÀÇ sound()");
+//	}
 }
 
 class Dog extends Animals {
 	private int d = 11;
-
+	@Override
 	void sound() {
 		System.out.println("¸Û¸Û" + d);
 	}
@@ -16,7 +16,7 @@ class Dog extends Animals {
 
 class Cat extends Animals {
 	private int c = 99;
-
+	@Override
 	void sound() {
 		System.out.println("¾ß¿Ë" + c);
 	}
@@ -26,14 +26,14 @@ public class DynamicCallTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Animals animal = new Animals();
+//		Animals animal = new Animals();
 		Dog dog = new Dog();
 		Cat cat = new Cat();
 
 		Animals obj;
 
-		obj = animal;
-		obj.sound();
+//		obj = animal;
+//		obj.sound();
 
 		obj = dog;
 		obj.sound();
@@ -41,7 +41,7 @@ public class DynamicCallTest {
 		obj = cat;
 		obj.sound();
 
-		test(animal);
+//		test(animal);
 		test(dog);
 		test(cat);
 
